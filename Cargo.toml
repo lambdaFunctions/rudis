@@ -1,0 +1,27 @@
+[package]
+name = "rudis"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rudis"
+path = "src/main.rs"
+
+[[bin]]
+name = "worker"
+path = "src/bin/worker.rs"
+
+[[bin]]
+name = "client"
+path = "src/bin/client.rs"
+
+[[bin]]
+name = "admin"
+path = "src/bin/admin.rs"
+
+[dependencies]
+core_affinity = "0.8"          # CPU pinning
+crossbeam = "0.8"              # cache‑padded types
+libc = "0.2"                   # real‑time scheduling, syscalls
+socket2 = "0.5"
+
